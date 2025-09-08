@@ -1,0 +1,323 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1em;
+    line-height: 1.6;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--background);
+    color: var(--header-text);
+    text-align: center;
+    padding: 80px 15px 0 15px;
+    /* Increased padding for more space */
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    /* Reduced margin below h1 */
+}
+
+p {
+    margin-bottom: 5px;
+    /* Reduced margin below paragraph */
+}
+
+#nav-links {
+    margin: 20px 0;
+    /* Increased margin for better spacing */
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1.2em;
+    /* Restored original font size */
+}
+
+nav ul li a:hover {
+    color: var(--link-hover-color);
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    /* Reduced margin around main */
+    padding: 0 20px;
+    /* No padding top/bottom */
+}
+
+section {
+    margin-bottom: 20px;
+    /* Reduced bottom margin for sections */
+    padding: 10px;
+    /* Reduced padding for sections */
+}
+
+h2 {
+    font-size: 1.4em;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+    /* Margin below h2 */
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 10px 40px;
+    color: var(--header-text);
+}
+
+/* Light Theme */
+.light-theme {
+    --background: #f4f4f4;
+    --text-color: #333;
+    --header-text: #000;
+    --link-color: #007acc;
+    --link-hover-color: #005a99;
+    --heading-color: #005a99;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+/* Dark Theme */
+.dark-theme {
+    --background: #1e1e1e;
+    --text-color: #cfcfcf;
+    --header-text: #cfcfcf;
+    --link-color: #79d8f2;
+    --link-hover-color: #5a99cc;
+    --heading-color: #569cd6;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+/* Connect Section Links Styles */
+#connect a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Specific colors for LinkedIn and WhatsApp */
+#whatsapp {
+    color: #25D366;
+    /* WhatsApp green */
+}
+
+#whatsapp:hover {
+    text-decoration: underline;
+    /* Optional hover effect */
+}
+
+#linkedin {
+    color: #0077B5;
+    /* LinkedIn blue */
+}
+
+#linkedin:hover {
+    text-decoration: underline;
+    /* Optional hover effect */
+}
+
+#github {
+    color: var(--text-color);
+    /* GitHub link color depends on the theme */
+}
+
+#github:hover {
+    text-decoration: underline;
+    /* Optional hover effect */
+}
+
+/* Light Theme Link */
+.light-theme #link {
+    color: #007acc;
+    /* Bright Blue for light mode */
+}
+
+/* Dark Theme Link */
+.dark-theme #link {
+    color: #79d8f2;
+    /* Light Cyan for dark mode */
+}
+
+/* Link Hover Effect */
+#link:hover {
+    text-decoration: underline;
+    /* Optional hover effect */
+}
+
+#email {
+    color: var(--text-color);
+    /* Email link color depends on the theme */
+}
+
+#email:hover {
+    text-decoration: underline;
+    /* Optional hover effect */
+}
+
+/* Theme Switcher Styles */
+#theme-switcher {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    /* Change mouse cursor to pointer on hover */
+}
+
+#theme-switcher:hover {
+    transform: scale(1.2);
+    /* Slightly enlarge the button on hover */
+}
+
+#theme-switcher span {
+    transition: transform 0.5s ease-in-out;
+    /* Smooth transition for icon scaling */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+    #theme-switcher {
+        font-size: 20px;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+#words-of-wisdom {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+#words-of-wisdom h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#wisdom-quote {
+    font-style: italic;
+    font-size: 1.2em;
+    color: var(--text-color);
+}
+
+/* Top Bar Styles */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    /* Increased height for more space */
+    display: flex;
+    /* Align and switcher horizontally */
+    justify-content: space-between;
+    /* Distribute evenly */
+    align-items: center;
+    /* Center vertically */
+    background-color: var(--top-bar-background);
+    /* Dynamic background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Add subtle shadow */
+    z-index: 10;
+    /* Ensure bar stays on top */
+}
+
+#clock {
+    color: var(--text-color);
+    font-size: 1.1em;
+    /* Larger font size */
+    padding: 0 15px;
+    /* Add some padding */
+}
+
+/* Dynamic background color for top bar */
+.light-theme .top-bar {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.dark-theme .top-bar {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.light-theme-icon {
+    display: inline;
+    /* Show by default */
+}
+
+.dark-theme-icon {
+    display: none;
+    /* Hide by default */
+}
+
+.dark-theme {
+    .light-theme-icon {
+        display: none;
+        /* Hide in dark theme */
+    }
+
+    .dark-theme-icon {
+        display: inline;
+        /* Show in dark theme */
+    }
+}
+
+/* Photo Gallery Styling */
+#photo-gallery {
+    margin: 2rem auto;
+    text-align: center;
+    padding: 1rem;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.gallery-image {
+    flex: 1 1 45%;
+    max-width: 45%;
+    height: auto;
+    object-fit: contain;
+    /* show entire image without cropping */
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.03);
+}

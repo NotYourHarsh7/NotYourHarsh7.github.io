@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HrxWrdn's Website</title>
+    <meta name="description" content="Welcome to Har Ashish Arora's website.">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            const userPreference = localStorage.getItem('theme');
+            if (userPreference) {
+                document.documentElement.classList.add(userPreference + '-theme');
+            } else {
+                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (systemPrefersDark) {
+                    document.documentElement.classList.add('dark-theme');
+                } else {
+                    document.documentElement.classList.add('dark-theme'); // Default to dark theme
+                }
+            }
+        })();
+    </script>
+
+    <script>
+        // Inline script to check the theme before rendering the page
+        (function () {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-theme');
+            } else {
+                document.documentElement.classList.add('light-theme');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>print("Hello, Stalkers!")</h1>
+            <p>// Welcome to the website of Harshwardhan Ahlawat.</p>
+        </div>
+        <div class="top-bar">
+            <div id="clock"></div>
+            <button id="theme-switcher" aria-label="Toggle Theme">
+                <span class="light-theme-icon">⏾</span> <span class="dark-theme-icon">☀️</span>
+            </button>
+        </div>
+    </header>
+
+    <div id="clock"
+        style="position: fixed; top: 10px; left: 10px; font-family: 'Courier New', Courier, monospace; font-size: 1.1em; color: var(--text-color);">
+    </div>
+
+    <main>
+        <section id="nav-links">
+            <nav>
+                <ul>
+                    <li><a href="./">Home</a></li>
+                    <li><a href="./BIG BAZAAR.pdf">Resources</a></li>
+                    <li><a href="./CV.png" target="_blank">Curriculum Vitae</a></li>
+                </ul>
+            </nav>
+        </section>
+        
+
+        <section id="connect">
+            <h2>/* About me */</h2>
+            <p>// I want to KMS 💔🥀.</p>
+            <p>// Currently an Electronics Engineering and VLSI Design Technology undergrad at DTU.</p>
+        </section>
+        
+        <section id="connect">
+            <h2>/* Connect */</h2>
+            <p>// You can reach out to me on:</p>
+            <a href="https://github.com/NotYourHarsh7" id="github" target="_blank">[GitHub]</a> |
+            <a href="https://www.linkedin.com/in/harshwardhan-ahlawat-b298a9376/" id="linkedin" target="_blank">[LinkedIn]</a> |
+            <a href="mailto:https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" id="email" target="_blank">[Email]</a> |
+            <a href="https://wa.me/7302307918" id="whatsapp" target="_blank">[WhatsApp]</a>
+        </section>
+
+        <section id="words-of-wisdom">
+            <h2>Words of Wisdom</h2>
+            <p id="wisdom-quote"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&lt;/&gt; Harshwardhan Ahlawat &copy; 2025</p>
+    </footer>
+
+    <button id="theme-switcher" aria-label="Toggle Theme">
+        <span class="light-theme-icon">⏾</span> <span class="dark-theme-icon">☀️</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
